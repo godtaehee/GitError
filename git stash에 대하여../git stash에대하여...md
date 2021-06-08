@@ -38,7 +38,7 @@
 
 ## git stash apply
 
-`git stash apply`명령어는 스택에 담겨있던 0번째의 `stash`를 꺼내 적용시켜준다. 이는 stash를 저장할때 스택이라는 자료구조에 저장하기 때문이다. 하지만 특정 stash를 꺼낼수도 있는데 `git stash apply stash@{2}`처럼 2번째의 stash를 적용시킬수 있따. 또한 변경내역이 원래는 staged된 상태였다면 git은 staged 상태로 되돌리면서 적용시키지 않는다. 그래서 만약 staged된 상태까지 유지시키며 적용시키고 싶다면 `git stash apply --index`명령어를 통해 staged된 내용은 그대로 staged된 상태와 내용을 복구시킬수 있다. 그런데 apply명령어는 단순히 적용시킬 뿐이지 `stash`스택에서 방금 적용시킨 `stash`를 제거하지는 않는다. 따라서 `git stash drop`을 해주어야 스택에 저장된 `stash`가 사라지며 `drop`역시 `git stash drop stash@{2}`처럼 특정 `stash`를 `drop`할수 있다. 혹시 만약 적용과 동시에 삭제를 하고싶다면 `git stash pop`명령어를 사용하면 된다.
+`git stash apply`명령어는 스택에 담겨있던 0번째의 `stash`를 꺼내 적용시켜준다. 이는 stash를 저장할때 스택이라는 자료구조에 저장하기 때문이다. 하지만 특정 stash를 꺼낼수도 있는데 `git stash apply stash@{2}`처럼 2번째의 stash를 적용시킬수 있다. 또한 변경내역이 원래는 staged된 상태였다면 git은 staged 상태로 되돌리면서 적용시키지 않는다. 그래서 만약 staged된 상태까지 유지시키며 적용시키고 싶다면 `git stash apply --index`명령어를 통해 staged된 내용은 그대로 staged된 상태와 내용을 복구시킬수 있다. 그런데 apply명령어는 단순히 적용시킬 뿐이지 `stash`스택에서 방금 적용시킨 `stash`를 제거하지는 않는다. 따라서 `git stash drop`을 해주어야 스택에 저장된 `stash`가 사라지며 `drop`역시 `git stash drop stash@{2}`처럼 특정 `stash`를 `drop`할수 있다. 혹시 만약 적용과 동시에 삭제를 하고싶다면 `git stash pop`명령어를 사용하면 된다.
 
 [##_Image|kage@cLbEGI/btq6lZo03B0/yLMffgndXHGlIfPLkJcp2k/img.png|alignCenter|width="100%" data-origin-width="444" data-origin-height="253" data-ke-mobilestyle="widthOrigin"|||_##]
 
